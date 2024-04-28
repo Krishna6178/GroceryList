@@ -1,0 +1,8 @@
+.mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  .close {
+    margin-left: auto; /* Push the button to the right */
+  }

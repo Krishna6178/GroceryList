@@ -1,0 +1,49 @@
+/* login.component.css */
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 222, 242);
+    height: 100vh; /* Optional: Set a minimum height for the container */
+  }
+  
+  .login-card {
+    width: 450px; /* Adjust the width as needed */
+    height: 450px;
+    background-color: rgb(118, 154, 199);
+  }
+  .title{
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  mat-form-field {
+
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  input.mat-input {
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around; /* Adjust the spacing between buttons */
+}
+
+.login-button.mat-raised-button {
+    background-color: #4caf50; /* Green color */
+    color: white; /* Text color */
+}
+
+.reset-button.mat-raised-button {
+    background-color: #f44336; /* Red color */
+    color: white; /* Text color */
+}
+
+.mat-raised-button:hover {
+    opacity: 0.8;
+}

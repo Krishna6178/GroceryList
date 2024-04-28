@@ -1,0 +1,26 @@
+<div class="login">
+  <mat-card class="login-card">
+      <mat-card-header>
+          <mat-card-title class="title">Order N Grab</mat-card-title>
+          <mat-card-subtitle class="subtitle">Login</mat-card-subtitle>
+      </mat-card-header>
+<br><br>
+      <mat-card-content>
+          <mat-form-field>
+              <mat-label>Enter your username</mat-label>
+              <input matInput class="username-class" [(ngModel)]="user">
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" class="password-class" [(ngModel)]="pass">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <div class="buttons">
+              <button mat-raised-button class="login-button" value="Submit" (click)="onSubmit()">Submit</button>
+              <button mat-raised-button class="reset-button" (click)="onReset()">Reset</button>
+            </div>
+      </mat-card-content>
+  </mat-card>
+</div>

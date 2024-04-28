@@ -1,0 +1,17 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+.logout {
+   margin-left: 280px; /* Push the button to the right */
+}

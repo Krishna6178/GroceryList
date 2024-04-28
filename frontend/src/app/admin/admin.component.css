@@ -1,0 +1,105 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+.indianAdd, .otherAdd{
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.showData{
+  padding-left: 12px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.grid-item.completed {
+  background-color: #baf0c4;
+}
+
+.item {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ids {
+  color: #555;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/* Container styles */
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 20px; /* Add space around content */
+}
+
+h2 {
+  background-color: azure;
+  color: rgb(94, 14, 14);
+}
+
+.clearDiv {
+  text-align: center;
+}
+
+.clearButton {
+  margin-top: 10px;
+}
+
+/* Tab group styles */
+.mat-tab-group {
+  margin-left: 20px !important;
+  margin-right: 20px !important; /* Add space on the left and right */
+}
+
+/* Additional styles */
+.addGroceries, .View { /* Adjusted to target both tabs */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 60px;
+  padding-left: 15px; /* Add space on the left */
+}
+
+.submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.remove {
+  background-color: rgb(253, 91, 91);
+  color: white;
+}
+
+.AddButton {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.custom-small-button {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 6px 12px; /* Adjust the padding as needed */
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout {
+ margin-left: 280px; /* Push the button to the right */
+}

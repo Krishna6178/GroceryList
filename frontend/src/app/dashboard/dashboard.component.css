@@ -1,0 +1,77 @@
+/* dashboard.component.css */
+
+.addGroceries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 60px;
+ 
+    /*padding: 60px 20px 20px 20px;*/
+  }
+  
+  .indianGroc,
+  .otherGroc {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    vertical-align: baseline;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    
+  }
+  .selectedIndian,
+  .selectedOther{
+    display: flex;
+    flex-direction: column;
+    vertical-align: baseline;
+  }
+  
+  .mat-form-field {
+    width: 250px;
+    margin-right: 20px;
+  }
+  
+  .login-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  .submit{
+    background-color: #4caf50;
+    color: white;
+  }
+  
+   .remove{
+    background-color: rgb(253, 91, 91);
+    color: white;
+  }
+  
+  .selected-items {
+    margin-top: 20px;
+  }
+  
+  .selected-items p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .logout{
+    float: right;
+  }
+  
+  .note{
+    margin-top: 10px;
+  }
+
+  h2{
+    color: rgb(85, 136, 218);
+  }
+
+.note{
+  margin-left: 10px;
+  margin-right: 10px;
+}

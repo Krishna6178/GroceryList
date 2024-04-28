@@ -1,0 +1,91 @@
+
+<div class="logoutbutton">
+  <button mat-raised-button class="logout" color="warn" (click)="logout()" >Logout</button>
+  </div>
+  <mat-tab-group>
+  
+    <mat-tab label="View">
+
+      <div class="container">
+          <div>
+              <h2>Indian Groceries</h2>    
+          </div>
+       <div class="grid-container">
+         
+          <div *ngFor="let item of indianItems" class="grid-item" [ngClass]="{ 'completed': item[2] }">
+            <div class="item">{{ item[0] }}</div>
+            <div class="ids">
+              <span *ngFor="let id of item[1]"><p>{{ id }}</p></span>
+            </div>
+            <!-- <button mat-raised-button color="primary" (click)="markAsCompleted(item)">DONE</button>
+            <button mat-raised-button color="warn" (click)="markAsIncomplete(item)">NOT DONE</button> -->
+          </div>
+          </div>
+        <div>
+          <h2>Other Groceries</h2>
+        </div>
+      <div class="grid-container">
+          <div *ngFor="let item of otherItems" class="grid-item" [ngClass]="{ 'completed': item[2] }">
+            <div class="item">{{ item[0] }}</div>
+            <div class="ids">
+              <span *ngFor="let id of item[1]"><p>{{ id }}</p></span>
+            </div>
+            <!-- <button mat-raised-button color="primary" (click)="markAsCompleted(item)">DONE</button>
+            <button mat-raised-button color="warn" (click)="markAsIncomplete(item)">NOT DONE</button> -->
+          </div>
+      </div>
+      
+      <div class="notes" *ngIf="notesToSee.length >0">
+        <div *ngFor="let ele of notesToSee">
+          <p>{{ele.id}} : {{ele.note}}</p>
+        </div>
+      </div>
+      <div class="clearDiv">
+          
+          <button mat-raised-button color="accent" class="clearButton" (click)="openConfirmationDialog()">CLEAR ALL</button>
+      </div>
+      </div>
+      </mat-tab>
+<mat-tab label="Add" [ngClass]="{'AddTab':true}">
+  <div class="indianAdd">
+    <h2>Indian Groceries</h2>
+    <mat-form-field class="Item">
+      <mat-label>Item to Add</mat-label>
+      <input matInput [(ngModel)]="itemtoAdd">
+    </mat-form-field>
+    <button mat-raised-button (click)="AddToIndian()" color="primary" class="AddButton" size="small">Add</button>
+  </div>
+  <div *ngIf="IndiantoAdd.length > 0" class="selectedIndian">
+    <ng-container *ngFor="let option of IndiantoAdd">
+      <p class="showData">
+      {{option}}
+      <button mat-raised-button class="remove" (click)="removeIndianAddedItem(option)">X</button>
+    </p>
+    </ng-container>
+  </div>
+  
+
+  <div class="otherAdd">
+    <h2>Other Groceries</h2>
+    <mat-form-field class="Item">
+      <mat-label>Item to Add</mat-label>
+      <input matInput [(ngModel)]="itemtoOther">
+    </mat-form-field>
+    <button mat-raised-button (click)="AddToOthers()" color="primary" class="AddButton">Add</button>
+  </div>
+  <div *ngIf="OtherToAdd.length > 0" class="otherSelected">
+    <ng-container *ngFor="let option of OtherToAdd">
+      <p class="showData">
+      {{option}}
+      <button mat-raised-button class="remove" (click)="removeOtherAddedItem(option)">X</button>
+    </p>
+    </ng-container>
+  </div>
+  
+  <div style="padding: 10px;">
+    <button mat-raised-button (click)="saveItems()" color="accent" >Submit</button>
+  </div>
+
+</mat-tab>
+
+</mat-tab-group>

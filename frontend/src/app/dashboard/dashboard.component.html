@@ -1,0 +1,92 @@
+<div>
+  <button mat-raised-button class="logout" color="warn" (click)="logout()">
+    Logout
+  </button>
+</div>
+<div class="addGroceries" (sendUser)="getUser($event)">
+  <div class="indianGroc">
+    <h2>Indian Groceries</h2>
+    <div>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selectedIndianOption">
+          <mat-option *ngFor="let option of indgroc" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="login-button"
+        value="Submit"
+        (click)="onClickAdd()"
+      >
+        Add
+      </button>
+    </div>
+    <div *ngIf="indianSelected.length > 0" class="selectedIndian">
+      <ng-container *ngFor="let option of indianSelected">
+        <p>
+          {{ option }}
+          <button
+            mat-raised-button
+            class="remove"
+            (click)="removeIndianItem(option)"
+          >
+            X
+          </button>
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div class="otherGroc">
+    <h2>Other Groceries</h2>
+    <div>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selectedOtherOption">
+          <mat-option *ngFor="let option of othergroc" [value]="option">
+            {{ option }}
+
+            <br />
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="login-button"
+        value="Submit"
+        (click)="onClickAddOthers()"
+      >
+        Add
+      </button>
+    </div>
+    <div *ngIf="otherSelected.length > 0" class="selectedOther">
+      <ng-container *ngFor="let option of otherSelected">
+        <p>
+          {{ option }}
+          <button
+            mat-raised-button
+            class="remove"
+            (click)="removeOtherItem(option)"
+          >
+            X
+          </button>
+        </p>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="note">
+    <mat-form-field class="Item">
+      <mat-label>Additional Items</mat-label>
+      <input
+        matInput
+        placeholder="Enter items like item1, item2 .."
+        [(ngModel)]="notesField"
+      />
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button class="submit" (click)="onSubmit()">Submit</button>
+</div>
