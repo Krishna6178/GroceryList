@@ -1,15 +1,15 @@
-const express = require('express');
+import express, { json, urlencoded } from 'express';
 const app = express();
-const cors = require('cors');
-const groceryRoutes = require('./routes/groceryRoutes');
+import cors from 'cors';
+import groceryRoutes from './routes/groceryRoutes';
 const PORT = process.env.PORT || 3001;
-const connectDB = require('./config/db');
+import connectDB from './config/db';
 connectDB();
 app.use(cors());
 
-app.use(express.json());
+app.use(json());
 
-app.use(express.urlencoded({ extended: false }));
+app.use(urlencoded({ extended: false }));
 
 
 app.use('/api/grocery', groceryRoutes);

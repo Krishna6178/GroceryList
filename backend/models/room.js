@@ -8,7 +8,6 @@ const roomSchema = new mongoose.Schema({
     walmart: [String],
     indian: [String],
     note: String,
-    
 });
 
 module.exports = mongoose.model('Room', roomSchema);
